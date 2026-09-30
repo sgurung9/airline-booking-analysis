@@ -1,18 +1,7 @@
 # airline-booking-analysis
 
-# ✈️ Airline Booking Import and Reconciliation — PostgreSQL
+# Airline Booking Import and Reconciliation — PostgreSQL
 
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
-![SQL](https://img.shields.io/badge/Language-SQL-orange)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
-
-A scenario-based **airline booking data integration project** using PostgreSQL to investigate import errors, resolve competing updates, load accepted records, and reconcile source and destination data.
-
-The project uses the **Postgres Professional Airlines demonstration database** as a reference dataset. Separate staging batches simulate incoming updates with intentionally introduced data problems. The focus is on SQL troubleshooting, data quality, transactional loading, and reproducible verification.
-
-> **Project status:** This README describes the intended implementation. SQL scripts, screenshots, and measured results will be added as the project is completed. Features listed below are planned until verified by the completion checklist.
-
----
 
 ## 📌 Table of Contents
 
