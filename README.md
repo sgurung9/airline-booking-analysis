@@ -6,7 +6,7 @@ A SQL data integration project that processes simulated airline booking updates,
 
 ## Data Source
 
-The project uses the **2017 English small Airlines demonstration database** from [Postgres Professional](https://postgrespro.com/docs/postgrespro/13/demodb-bookings-installation.html).
+The project uses the **2017 English small Airlines demonstration database** from Postgres Professional
 
 Booking totals are verified against ticket-flight charges using `book_ref` and `ticket_no`. Two incoming batches contain deliberately introduced errors and update timestamps. The source is demonstration data; the imports are simulated.
 
@@ -16,7 +16,6 @@ Booking totals are verified against ticket-flight charges using `book_ref` and `
 - **Deterministic deduplication:** Use `ROW_NUMBER()` to select the latest update, with a source-row tie-breaker.
 - **Safe loading:** Use a PL/pgSQL procedure and timestamp-controlled `INSERT ... ON CONFLICT` to insert bookings and apply newer updates.
 - **Traceability:** Save a disposition for every incoming row and an audit summary for each completed batch.
-- **Repeatability and recovery:** Skip completed batches and verify that an unexpected constraint failure rolls back related writes.
 - **Reconciliation:** Check completeness, reference values, latest updates, classifications, and audit counts.
 
 ## Results
